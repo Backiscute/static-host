@@ -1,0 +1,46 @@
+{
+  "name": "@backs/static-host",
+  "version": "1.0.0",
+  "description": "A server that hosts static files.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "dev:watch": "nodemon -x ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "start:watch": "nodemon dist/index.js",
+    "build": "tsc && prettier --write --log-level=silent ./dist",
+    "lint": "prettier --check ./src && eslint ./src --ext .ts",
+    "check": "tsc --noEmit",
+    "format": "prettier --write ./src && eslint ./src --ext .ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backiscute/static-host.git"
+  },
+  "author": {
+    "name": "Back",
+    "email": "me@back.rs",
+    "url": "https://back.rs"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/backiscute/static-host/issues"
+  },
+  "homepage": "https://github.com/backiscute/static-host#readme",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "express": "^4.19.2",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.1",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.1"
+  }
+}
